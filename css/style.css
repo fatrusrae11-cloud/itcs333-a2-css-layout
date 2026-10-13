@@ -1,7 +1,111 @@
-/* ITCS333 A2 starter — implement the design spec from index.html here.
-   See README rubric for the graded checks. Do not use inline styles. */
+/* Page style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+}
 
-/* TODO: style #site-header (padding, border-bottom) */
-/* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
-/* TODO: style form inputs (padding) and a :focus state */
-/* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+/* Header */
+#site-header {
+  background-color: #345678;
+  color: white;
+  padding: 16px;
+  border-bottom: 2px solid #222;
+}
+
+.main-nav a {
+  color: white;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.content-section {
+  background-color: white;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: #ddd;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background-color: #fafafa;
+  padding: 12px;
+  border: 1px solid #bbb;
+  margin: 2px;
+}
+
+.weight {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 350px;
+}
+
+.register-form input {
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+.register-form input:focus {
+  outline: 2px solid #345678;
+}
+
+.btn-primary {
+  padding: 8px;
+  background-color: #345678;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #456789;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
